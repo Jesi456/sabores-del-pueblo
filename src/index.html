@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Página principal de Sabor & Comida, restaurante - " />
+    <meta name="keywords" content="comida, restaurante, menú, reservas, gastronomía" />
+    <meta name="author" content="Estudiante - Proyecto Final" />
+    <title>Sabores del Pueblo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#e74c3c',
+                            600: '#c0392b',
+                            300: '#f1948a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../recursos/image/logo.jpg" />
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <header class="bg-gray-900 shadow-2xl sticky top-0 z-50 border-b-4 border-primary-500">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a class='flex items-center gap-3 group' href='index.html'>
+                <img src="../recursos/image/logo.jpg" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg" />
+                <span class="font-extrabold text-xl md:text-2xl tracking-wider text-white">Sabores del Pueblo</span>
+            </a>
+
+            <nav id="nav-menu" class="hidden md:flex gap-4">
+                <a class='px-3 py-2 bg-primary-500 text-white rounded-lg font-semibold transition-colors' href='index.html' >Inicio </a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='menu.html'>Menú</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='nosotros.html'>Nosotros</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='reservas.html'>Reservas</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='contacto.html'>Contacto</a>
+            </nav>
+            
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-3xl text-primary-500 focus:outline-none">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a class='text-white bg-primary-500 px-4 py-2 rounded-lg' href='index.html'>Inicio</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='menu.html'>Menú</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='nosotros.html'>Nosotros</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='reservas.html'>Reservas</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='contacto.html'>Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative">
+            <div class="h-[70vh] md:h-[80vh] bg-cover bg-center" style="background-image: url('../recursos/image/hero.jpg');">
+                <div class="bg-black/60 h-full flex items-center">
+                    <div class="container mx-auto px-6 text-white text-center md:text-left">
+                        <h1 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
+                            Sabores del Pueblo<br />
+                            <span class="text-primary-300 text-3xl md:text-6xl">Platillos con sabor a hogar</span>
+                        </h1>
+                        <p class="mt-4 max-w-xl mx-auto md:mx-0 text-lg md:text-xl font-light text-gray-200">
+                            Vení y sorprendete no solo con la comida, si no también con la escencia del pueblo, sus paisajes, su gente, enamorate de nuestro lugar. ¡Reserva tu mesa!
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                            <a class='bg-primary-500 text-white px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-primary-600 transition-all text-center shadow-xl' href='reservas.html'>Reservar mesa</a>
+                            <a class='bg-white/20 border-2 border-white text-white px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-white/30 transition-all text-center' href='menu.html'>Ver menú</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-16 md:py-20">
+            <div class="text-center md:text-left mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold border-b-4 border-primary-500 pb-3 inline-block">Del pueblo a la mesa</h2>
+                <p class="mt-4 text-gray-600 text-lg md:text-xl">Conoce tambien de donde obtenemos nuestros productos para la creación de los mejores platillos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <article class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="../recursos/image/hortalizas.jpg" alt="Hortalizas" class="w-full h-56 md:h-64 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-primary-500">Hortalizas</h3>
+                        <p class="text-gray-700 mt-2">Nuestros pobladores producen las verduras que utilizamos en cada preparación.</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="../recursos/image/carnes.webp" alt="Carnes" class="w-full h-56 md:h-64 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-primary-500">Carnes</h3>
+                        <p class="text-gray-700 mt-2">La producción de proteinas, es obtenida desde una granja a la salida del pueblo.</p>
+                    </div>
+                </article>
+                <article class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                    <img src="../recursos/image/images.jpeg" alt="Dulces" class="w-full h-56 md:h-64 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-primary-500">Dulces</h3>
+                        <p class="text-gray-700 mt-2">Los dulces son preparados con fruta que vecinos nos proveen desde sus hogares.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div>
+                <h3 class="font-extrabold text-2xl text-white tracking-wide">Sabores del Pueblo</h3>
+                <p class="text-sm mt-3 text-gray-400">Platos caseros, con ingredientes frescos y abundantes, con el amor de nuestro querido pueblo Singuil.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Enlaces</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a class='hover:text-primary-500 transition-colors' href='menu.html'>Menú</a></li>
+                    <li><a class='hover:text-primary-500 transition-colors' href='reservas.html'>Reservas</a></li>
+                    <li><a class='hover:text-primary-500 transition-colors' href='contacto.html'>Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Contacto</h4>
+                <p class="text-sm text-gray-400">Tel: 383 4234567</p>
+                <p class="text-sm text-gray-400 mt-2">Ruta Provincial N1 Singuil, Departamento Ambato.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Síguenos</h4>
+                <div class="flex space-x-5 mt-2">
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-gray-400 text-xs md:text-sm py-5 text-center">
+            © 2025 Sabores del Pueblo. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Menú con precios y descripciones" />
+    <meta name="keywords" content="comida, restaurante, menú, reservas, gastronomía" />
+    <meta name="author" content="Estudiante - Proyecto Final" />
+    <title>Sabores del Pueblo</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#e74c3c',
+                            600: '#c0392b',
+                            300: '#f1948a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../recursos/image/logo.jpg" />
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <header class="bg-gray-900 shadow-2xl sticky top-0 z-50 border-b-4 border-primary-500">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a class='flex items-center gap-3 group' href='index.html'>
+                <img src="../recursos/image/logo.jpg" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg" />
+                <span class="font-extrabold text-xl md:text-2xl tracking-wider text-white">Sabores del Pueblo</span>
+            </a>
+
+            <nav class="hidden md:flex gap-4">
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='index.html'>Inicio</a>
+                <a class='px-3 py-2 bg-primary-500 text-white rounded-lg font-semibold transition-colors' href='menu.html'>Menú</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='nosotros.html'>Nosotros</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='reservas.html'>Reservas</a>
+                <a class='px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-primary-500 rounded-lg font-medium transition-colors' href='contacto.html'>Contacto</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-3xl text-primary-500">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='index.html'>Inicio</a>
+                <a class='text-white bg-primary-500 px-4 py-2 rounded-lg' href='menu.html'>Menú</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='nosotros.html'>Nosotros</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='reservas.html'>Reservas</a>
+                <a class='text-gray-300 px-4 py-2 hover:bg-gray-700 rounded-lg' href='contacto.html'>Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-80 md:h-[500px] bg-cover bg-center" style="background-image: url('../recursos/image/hero.jpg');">
+            <div class="bg-black/60 h-full flex items-center justify-center">
+                <div class="text-center text-white p-6 max-w-3xl">
+                    <h1 class="text-4xl md:text-8xl font-black tracking-tighter uppercase drop-shadow-xl">Menú </h1>
+                    <p class="mt-4 text-lg md:text-2xl font-light drop-shadow-md">
+                        Platos tradicionales, con el cariño de nuestra cocina local.
+                    </p>
+                    <a href="#platos" class="mt-8 inline-block bg-primary-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-primary-600 transition-all border-2 border-white">
+                        Ver Platos <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 md:px-6 py-12 md:py-20">
+            <section id="platos" class="bg-white p-6 md:p-8 rounded-2xl shadow-2xl">
+                <h2 class="font-extrabold text-2xl md:text-3xl mb-8 border-b-2 border-primary-500 pb-2 text-gray-900 flex items-center gap-3">
+                    <i class="fas fa-utensils text-primary-500"></i> Platos Principales
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+
+                    <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex flex-col sm:flex-row items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/humita-1-700x420.jpg" alt="Humita" class="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1 w-full">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                <div>
+                                    <h3 class="font-extrabold text-xl text-primary-500">Humita al plato</h3>
+                                    <p class="text-sm text-gray-600 mt-1">Choclo rallado, cocinado con un sofrito de verduras y condimentos, acompañado de queso, pan y una salsa especial.</p>
+                                </div>
+                                <span class="font-extrabold text-xl text-primary-500 mt-2 sm:mt-0">$5000 <small class="text-xs">el plato</small></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex flex-col sm:flex-row items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/tamales.jpeg" alt="Tamales" class="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1 w-full">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                <div>
+                                    <h3 class="font-extrabold text-xl text-primary-500">Tamales</h3>
+                                    <p class="text-sm text-gray-600 mt-1">Con masa de maiz, y un relleno de picadillo de carne vacuna, envuelto en chala.</p>
+                                </div>
+                                <span class="font-extrabold text-xl text-primary-500 mt-2 sm:mt-0">$1000 <small class="text-xs">c/u</small> $8000 <small class="text-xs">la Doc.</small></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex flex-col sm:flex-row items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/empanadas.jpeg" alt="Empanadas" class="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1 w-full">
+                            <div class="flex flex-col sm:flex-row justify-between items-start">
+                                <div>
+                                    <h3 class="font-extrabold text-xl text-primary-500">Empanadas</h3>
+                                    <p class="text-sm text-gray-600 mt-1">De carne, pollo, matambre, JyQ, Arabes. Al horno de barro o fritas.</p>
+                                </div>
+                                <div class="text-right mt-2 sm:mt-0">
+                                    <span class="font-extrabold text-md text-primary-500 block">$1000<small>C/u</small></span>
+                                    <span class="font-extrabold text-md text-primary-500 block">$10000<small>La Doc.</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                     <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex flex-col sm:flex-row items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/asado.webp" alt="Asado" class="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1 w-full">
+                            <div class="flex flex-col sm:flex-row justify-between items-start">
+                                <div>
+                                    <h3 class="font-extrabold text-xl text-primary-500">Asado</h3>
+                                    <p class="text-sm text-gray-600 mt-1">El corte que elijas con la ccoción justa.</p>
+                                </div>
+                                <div class="text-right mt-2 sm:mt-0">
+                                    <span class="font-extrabold text-md text-primary-500 block">$6000<small>Carne de Vaca</small></span>
+                                    <span class="font-extrabold text-md text-primary-500 block">$8000<small> Los demas cortes</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="hidden md:flex h-full bg-gray-100 rounded-xl items-center justify-center p-6 text-center text-gray-500 border border-dashed border-gray-300">
+                        <p class="font-semibold text-lg">Pronto más platos tradicionales</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-12 md:mt-16 bg-white p-6 md:p-8 rounded-2xl shadow-2xl">
+                <h2 class="font-extrabold text-2xl md:text-3xl mb-8 border-b-2 border-primary-500 pb-2 text-gray-900 flex items-center gap-3">
+                    <i class="fas fa-glass-cheers text-primary-500"></i> Bebidas
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                    <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/gaseosa.webp" alt="Limonada" class="w-20 h-20 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-extrabold text-lg text-primary-500">Gaseosas Frescas.</h3>
+                                <span class="font-extrabold text-lg text-primary-500">$2500 </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-center gap-4 hover:shadow-xl transition-all">
+                        <img src="../recursos/image/vinos-de-catamarca.jpg" alt="Vinos" class="w-20 h-20 object-cover rounded-lg shrink-0" />
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-extrabold text-lg text-primary-500">Vinos Catamarqueños </h3>
+                                <span class="font-extrabold text-lg text-primary-500">$3.500</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+     <footer class="bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div>
+                <h3 class="font-extrabold text-2xl text-white tracking-wide">Sabores del Pueblo</h3>
+                <p class="text-sm mt-3 text-gray-400">Platos caseros, con ingredientes frescos y abundantes, con el amor de nuestro querido pueblo Singuil.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Enlaces</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a class='hover:text-primary-500 transition-colors' href='menu.html'>Menú</a></li>
+                    <li><a class='hover:text-primary-500 transition-colors' href='reservas.html'>Reservas</a></li>
+                    <li><a class='hover:text-primary-500 transition-colors' href='contacto.html'>Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Contacto</h4>
+                <p class="text-sm text-gray-400">Tel: 383 4234567</p>
+                <p class="text-sm text-gray-400 mt-2">Ruta Provincial N1 Singuil, Departamento Ambato.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-white border-b border-primary-500 inline-block">Síguenos</h4>
+                <div class="flex space-x-5 mt-2">
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-500"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-gray-400 text-xs md:text-sm py-5 text-center">
+            © 2025 Sabores del Pueblo. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
