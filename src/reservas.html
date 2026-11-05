@@ -7,7 +7,7 @@
     <meta name="description" content="Reserva tu mesa en Sabores del Pueblo." />
     <meta name="keywords" content="comida, restaurante, menú, reservas, gastronomía" />
     <meta name="author" content="Estudiante - Proyecto Final" />
-    <title>Sabores del Valle — Reservas</title>
+    <title>Sabores del Pueblo — Reservas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -67,7 +67,7 @@
                 <div class="text-center text-white p-6 max-w-3xl">
                     <h1 class="text-4xl md:text-8xl font-black tracking-tighter uppercase drop-shadow-xl">Reserva tu Lugar</h1>
                     <p class="mt-4 text-lg md:text-2xl font-light drop-shadow-md">
-                        Te esperamos para pasar el mejor momentos con la más exquisita comida.
+                        Te esperamos para pasar los mejores momentos con la más exquisita comida.
                     </p>
                     <a href="#reservation-form" class="mt-8 inline-block bg-primary-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-primary-600 transition-all border-2 border-white">
                         Ir al Formulario <i class="fas fa-calendar-alt ml-2"></i>
@@ -89,12 +89,12 @@
 
                     <div class="mb-5">
                         <label class="block mb-2 text-sm font-bold text-gray-700">Cantidad de personas</label>
-                        <input type="number" min="1" max="20" placeholder="Ej: 4" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500 p-3" />
+                        <input type="number" min="1" max="20" required placeholder="Ej: 4" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500 p-3" />
                     </div>
 
                     <div class="mb-8">
                         <label class="block mb-2 text-sm font-bold text-gray-700">Fecha y hora</label>
-                        <input type="datetime-local" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500 p-3" />
+                        <input type="datetime-local" required class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500 p-3" />
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4">
